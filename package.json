@@ -1,0 +1,22 @@
+{
+  "name": "nats-cli",
+  "version": "1.0.0",
+  "description": "NATS message broker console client",
+  "main": "./src/nats-cli.js",
+  "scripts": {
+    "start": "node ./src/nats-cli.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/r1000ru/nats-cli.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "nats": "0.8.10"
+  },
+  "bin": {
+    "tecprog-cli": "./bin/nats-cli"
+  }
+}
