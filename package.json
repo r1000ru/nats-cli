@@ -17,6 +17,6 @@
     "nats": "0.8.10"
   },
   "bin": {
-    "tecprog-cli": "./bin/nats-cli"
+    "nats-cli": "./bin/nats-cli"
   }
 }
