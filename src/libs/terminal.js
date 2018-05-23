@@ -113,7 +113,7 @@ Terminal.prototype._subscribe = function(channel) {
             this._waitCommand();
             return;
         }
-        console.log('Message: ' + message);
+        console.log('');
         console.log('Request from channel "'.grey + channel.white + '": '.gray + message.blue);
         this._rl.question('Enter answer: ', (answer)=>{
             this._nats.publish(replyTo, answer);
