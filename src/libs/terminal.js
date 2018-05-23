@@ -108,6 +108,7 @@ Terminal.prototype._subscribe = function(channel) {
 
     this._channels[channel] = this._nats.subscribe(channel, (message, replyTo)=>{
         if (!replyTo) {
+            console.log('');
             console.log('Message from channel "'.grey + channel.white + '": '.gray + message.blue);
             this._waitCommand();
             return;
