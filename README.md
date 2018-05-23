@@ -1,10 +1,10 @@
 # Console client for NATS
 
-Use for debug messages and request in channels of NATS-server
+Use for debug messages and requests in channels of NATS-server
 
 ### Install
 
-Requires installed NodeJS.
+Require installed NodeJS.
 
 ```
 npm install -g nats-cli
