@@ -1,6 +1,6 @@
 {
   "name": "nats-term",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "NATS message broker console client",
   "main": "./src/nats-term.js",
   "scripts": {
