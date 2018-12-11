@@ -1,4 +1,4 @@
-# Console client for NATS
+# Terminal client for NATS
 
 Use for debug messages and requests in channels of NATS-server
 
@@ -7,7 +7,7 @@ Use for debug messages and requests in channels of NATS-server
 Require installed NodeJS.
 
 ```
-npm install -g nats-cli
+npm install -g nats-term
 ```
 
 ### Running

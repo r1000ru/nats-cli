@@ -1,8 +1,8 @@
 {
-  "name": "nats-cli",
+  "name": "nats-term",
   "version": "0.1.0",
   "description": "NATS message broker console client",
-  "main": "./src/nats-cli.js",
+  "main": "./src/nats-term.js",
   "scripts": {
     "start": "node ./src/nats-cli.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,6 +17,6 @@
     "nats": "0.8.10"
   },
   "bin": {
-    "nats-cli": "./bin/nats-cli"
+    "nats-term": "./bin/nats-term"
   }
 }

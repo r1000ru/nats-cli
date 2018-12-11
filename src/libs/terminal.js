@@ -106,15 +106,15 @@ Terminal.prototype._subscribe = function(channel) {
 
     console.log('Subscribed to "'.gray + channel.white + '" channel.'.gray);
 
-    this._channels[channel] = this._nats.subscribe(channel, (message, replyTo)=>{
+    this._channels[channel] = this._nats.subscribe(channel, (message, replyTo, from)=>{
         if (!replyTo) {
             console.log('');
-            console.log('Message from channel "'.grey + channel.white + '": '.gray + message.blue);
+            console.log('Message from channel "'.grey + from.white + '": '.gray + message.blue);
             this._waitCommand();
             return;
         }
         console.log('');
-        console.log('Request from channel "'.grey + channel.white + '": '.gray + message.blue);
+        console.log('Request from channel "'.grey + from.white + '": '.gray + message.blue);
         this._rl.question('Enter answer: ', (answer)=>{
             this._nats.publish(replyTo, answer);
             console.log('Answer was published in temporary channel "'.grey + replyTo.white + '": '.gray);
