@@ -13,7 +13,7 @@ npm install -g nats-term
 ### Running
 
 ```bash
-nats-tern -h 127.0.0.1 -p 4222
+nats-term -h 127.0.0.1 -p 4222
 ```
 
 Parameters *-h* and *-p* is optional, by default: 127.0.0.1:4222
