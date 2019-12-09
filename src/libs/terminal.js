@@ -189,6 +189,9 @@ Terminal.prototype.start = function(args) {
     let options = {
         url: 'nats://'
     };
+
+    let tokenIndex = args.indexOf('-t');
+    options.url += tokenIndex > -1 ?  (args[tokenIndex + 1] + '@') : '';
     
     let hostIndex = args.indexOf('-h');
     options.url += hostIndex>-1 && args[hostIndex+1] ? args[hostIndex+1] : '127.0.0.1';
@@ -196,6 +199,10 @@ Terminal.prototype.start = function(args) {
     let portIndex = args.indexOf('-p');
     options.url += ':' + (portIndex>-1 && args[portIndex+1] ? args[portIndex+1] : 4222);
     
+    let urlIndex = args.indexOf('-u');
+    if (urlIndex > -1) {
+        options.url = args[urlIndex+1];
+    }
     console.log(`Connecting to ${options.url}`.gray);
     
     this._nats = NATS.connect(options);

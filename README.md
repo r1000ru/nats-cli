@@ -13,10 +13,16 @@ npm install -g nats-term
 ### Running
 
 ```bash
-nats-term -h 127.0.0.1 -p 4222
+nats-term -t token -h 127.0.0.1 -p 4222
 ```
-
+Parameter *-t* is optional, by default empty string
 Parameters *-h* and *-p* is optional, by default: 127.0.0.1:4222
+
+or
+
+```bash
+nats-term -u nats://token@hostname:port
+```
 
 ### Use
 
